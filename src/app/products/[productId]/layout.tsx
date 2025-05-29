@@ -7,8 +7,12 @@ export default function productDetailsLayout({
 }) {
   return (
     <>
-      {children}
-      <p>product Details Layout</p>
+      <html lang="en">
+        <body>
+          {children}
+          <p>product Details Layout</p>
+        </body>
+      </html>
     </>
   );
 }
