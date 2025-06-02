@@ -6,12 +6,13 @@ export const metadata : Metadata = {
     }
 }
 
-const page = () => {
-    return (
-        <div>
-            blog
-        </div>
-    );
-};
-
-export default page;
+export default async function Blog() {
+    await new Promise ( (resolve) => {
+        setTimeout (()=> {
+            resolve("intentional delay")
+        }, 2000 )
+    } )
+  return (
+    <div>Blog</div>
+  )
+}
