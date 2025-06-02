@@ -2,6 +2,7 @@
 // import type { Metadata } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -14,15 +15,25 @@ const navLink = [
   { name: "Forgot Password", href: "/forgot-password" },
 ];
 
-export default function AuthLayout({
+export default function AuthTemplate({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
+  const [input, setInput] = useState("");
   return (
     <html lang="en">
       <body>
+        <div>
+          <input
+            type="text"
+            name=""
+            id=""
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+        </div>
         {navLink.map((link) => {
           const isActive =
             pathname === link.href ||
