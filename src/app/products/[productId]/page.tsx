@@ -1,5 +1,9 @@
 import { Metadata } from "next";
 
+function getRandomInt(count: number) {
+  return Math.floor(Math.random() * count);
+}
+
 type Props = {
   params: Promise<{ productId: string }>;
 };
@@ -14,6 +18,11 @@ export const generateMetadata = async ({
       resolve(`iPhone ${id}`);
     }, 100);
   });
+
+  const random = getRandomInt(2);
+  if (random === 1) {
+    throw new Error("Error Loading Review");
+  }
 
   return {
     title: `Product ${title}`,
