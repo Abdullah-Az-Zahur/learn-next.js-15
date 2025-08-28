@@ -4,12 +4,12 @@ export default function ComplexDashboardLayout({
   children,
   users,
   revenue,
-  notification,
+  notifications,
 }: {
   children: React.ReactNode;
-  users?: React.ReactNode;
-  revenue?: React.ReactNode;
-  notification?: React.ReactNode;
+  users: React.ReactNode;
+  revenue: React.ReactNode;
+  notifications: React.ReactNode;
 }) {
   return (
     <>
@@ -19,7 +19,7 @@ export default function ComplexDashboardLayout({
           <div> {users} </div>
           <div> {revenue} </div>
         </div>
-        <div> {notification} </div>
+        <div> {notifications} </div>
       </div>
     </>
   );

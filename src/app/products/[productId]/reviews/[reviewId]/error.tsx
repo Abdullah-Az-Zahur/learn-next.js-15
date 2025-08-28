@@ -21,7 +21,7 @@ export default function Error({
   return (
     <div>
       <h2>{error.message}</h2>
-      <button onClick={() => reload()}>Try again</button>
+      <button onClick={reload}>Try again</button>
     </div>
   );
 }
