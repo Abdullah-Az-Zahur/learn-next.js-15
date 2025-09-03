@@ -15,7 +15,7 @@ export type WonderImage = {
   location: string;
 };
 
-export const wondersImages = [
+export const wondersImages: WonderImage[] = [
   {
     id: "1",
     name: "Great Wall of China",

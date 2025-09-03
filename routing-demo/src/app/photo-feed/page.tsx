@@ -1,11 +1,27 @@
-import React from 'react';
+import React from "react";
+import { wondersImages } from "./wonders";
+import Link from "next/link";
+import Image from "next/image";
 
 const page = () => {
-    return (
-        <div>
-            <h2>Photo feed</h2>
-        </div>
-    );
+  return (
+    <main className="container mx-auto">
+      <h1 className="text-center text-3xl font-bold my-4">
+        New Wonders of the world
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        {wondersImages.map(({ id, src, name }) => (
+          <Link key={id} href={`/photo-feed/${id}`}>
+            <Image
+              alt={name}
+              src={src}
+              className="w-full object-cover aspect-square"
+            />
+          </Link>
+        ))}
+      </div>
+    </main>
+  );
 };
 
 export default page;

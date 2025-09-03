@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
 
-const layout = () => {
-    return (
-        <div>
-            <h3>photo feed layout</h3>
-        </div>
-    );
+const layout = (props: {
+  modal: React.ReactNode;
+  children: React.ReactNode;
+}) => {
+  return (
+    <div>
+      {props.modal}
+      {props.children}
+    </div>
+  );
 };
 
 export default layout;
