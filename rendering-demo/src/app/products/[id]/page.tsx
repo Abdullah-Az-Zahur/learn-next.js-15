@@ -12,7 +12,7 @@ export default async function ProductPage({
   return (
     <div>
       <h1>
-        Product {id} details rendered at {new Date().toLocaleTimeString()}{" "}
+        Product {id} details rendered at  {new Date().toLocaleTimeString()}{" "}
       </h1>
     </div>
   );
